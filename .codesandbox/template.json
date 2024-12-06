@@ -1,0 +1,10 @@
+{
+  "title": "Custom Detail Cell Renderer with Grid",
+  "runtime": "static",
+  "tags": [
+    "ag-grid",
+    "ag-charts",
+    "example"
+  ],
+  "published": false
+}

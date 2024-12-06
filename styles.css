@@ -1,0 +1,323 @@
+.example-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#myGrid {
+  flex: 1 1 0px;
+  width: 100%;
+}
+
+.full-width-panel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+}
+
+.call-record-cell {
+  text-align: right;
+}
+
+.full-width-detail {
+  padding-top: 4px;
+}
+
+.full-width-details {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
+}
+
+.full-width-grid {
+  margin-left: 125px;
+  padding: 25px;
+  display: block;
+  height: calc(100% - 50px) !important;
+}
+
+.full-width-grid-toolbar {
+  top: 4px;
+  left: 30px;
+  margin-left: 150px;
+  display: block;
+  position: absolute;
+}
+
+.full-width-phone-icon {
+  padding-right: 10px;
+}
+
+.full-width-search {
+  margin-left: 10px;
+}
+
+/* Add these styles to your existing styles.css */
+.detail-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.left-panel {
+  flex: 0 0 60%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.left-panel::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.grid-kv-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 8px;
+  background: var(--ag-background-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.kv-pair {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: var(--ag-header-background-color);
+  border-radius: 4px;
+  align-items: center;
+}
+
+.kv-key {
+  font-weight: bold;
+  color: var(--ag-header-foreground-color);
+}
+
+.detail-grid {
+  height: 200px;
+  width: 100%;
+  min-height: 200px;
+}
+
+.grids-container {
+  padding-bottom: 24px;
+}
+
+.right-panel {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  background: var(--ag-background-color);
+  border-radius: 4px;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.list-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.list-container {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--ag-odd-row-background-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.list-item span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 12px;
+}
+
+.list-item button {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: var(--ag-header-background-color);
+  border: 1px solid var(--ag-border-color);
+  border-radius: 4px;
+  color: var(--ag-header-foreground-color);
+  white-space: nowrap;
+}
+
+.list-item button:hover {
+  background: var(--ag-header-cell-hover-background-color);
+}
+/* Add these new styles */
+.panel-header {
+  margin-bottom: 16px;
+}
+
+.item-content,
+.edit-content {
+  width: 100%;
+}
+
+.item-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--ag-header-foreground-color);
+}
+
+.values-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.list-item span:not(.value-chip) {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 12px;
+}
+
+/* Update these specific styles */
+.value-chip {
+  background: var(--ag-header-background-color);
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block;
+  width: fit-content; /* Changed from auto */
+  max-width: 120px; /* Initial compact state */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 1 auto; /* Added to prevent flex stretching */
+}
+
+.value-chip.expanded {
+  max-width: none; /* Changed from 300px */
+  width: auto;
+  white-space: normal;
+  flex: none;
+}
+
+.values-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center; /* Added for better alignment */
+}
+
+.editable-values {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.value-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: var(--ag-header-background-color);
+  border-radius: 4px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.delete-icon:hover {
+  opacity: 1;
+}
+
+.add-new-value {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.add-new-value input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--ag-border-color);
+  background: var(--ag-background-color);
+  color: var(--ag-foreground-color);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.edit-actions button {
+  padding: 6px 12px;
+}
+
+.save-btn {
+  background: var(--ag-alpine-active-color);
+  color: white;
+}
+
+/* hide scrollbars */
+
+.left-panel {
+  /* Keep existing styles and add: */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.left-panel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.right-panel {
+  /* Keep existing styles and add: */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.right-panel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
